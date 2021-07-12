@@ -4,7 +4,7 @@ package br.com.projeto.model;
 
 public class Produtos {
     
-private int código;
+private int código:
     private String nome;
     private String descricao;
     private double preco;
