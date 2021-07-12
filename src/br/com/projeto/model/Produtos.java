@@ -1,10 +1,8 @@
-
 package br.com.projeto.model;
 
-
 public class Produtos {
-    
-private int código:
+
+    private int código;
     private String nome;
     private String descricao;
     private double preco;
@@ -53,10 +51,9 @@ private int código:
 
     public void setQtd_estoque(String qtd_estoque) {
         this.qtd_estoque = qtd_estoque;
-    } 
-    
-    
-/*
+    }
+
+    /*
     public Fornecedores getFornecedores() {
         return fornecedores;
     }
@@ -64,16 +61,13 @@ private int código:
     public void setFornecedores(Fornecedores fornecedores) {
         this.fornecedores = fornecedores;
     }
-*/
-
+     */
     public int getFornecedorId() {
         return fornecedorId;
-    } 
+    }
 
     public void setFornecedorId(int fornecedorId) {
         this.fornecedorId = fornecedorId;
     }
-    
-    
-    
+
 }
