@@ -1,0 +1,9 @@
+
+
+##Arquivos
+
+*.xml
+*.mf
+/build
+/nbproject
+/test
