@@ -10,6 +10,7 @@ import br.com.projeto.dao.ProdutosDao;
 import br.com.projeto.model.Fornecedores;
 import br.com.projeto.model.Produtos;
 import br.com.projeto.model.Utilitarios;
+import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -739,21 +740,33 @@ public class JFrmProdutos extends javax.swing.JFrame {
         DefaultTableModel modelo = (DefaultTableModel) jTable.getModel();
         modelo.setNumRows(0);
          ProdutosDao dao = new ProdutosDao();
+         Produtos d = new Produtos();
+         FornecedoresDao da = new FornecedoresDao();
+         String nome = null;
         
-        for(Produtos p: dao.listarProdutos()){
+        for(Fornecedores t: da.listarFornecedores()){
+            nome= t.toString();
+            String h = nome.substring(0,1);
+        int n;
+        n = Integer.parseInt(h);
+        
+            System.out.println(nome.substring(1));
+            for(Produtos p: dao.listarProdutos()){
+            if (n == p.getFornecedorId()) {
+            
             modelo.addRow(new Object[]{
                 p.getCódigo(),
                 p.getNome(),
                 p.getDescricao(),
                 p.getPreco(),
                 p.getQtd_estoque(),
-                p.getFornecedorId()
+                p.getFornecedorId() + nome.substring(1)
                
                 
             
             });
         }
-     }
+     }}}
      
      public void ProCombobox(){
          FornecedoresDao dao = new FornecedoresDao();
@@ -827,7 +840,9 @@ public class JFrmProdutos extends javax.swing.JFrame {
         txtdesc.setText(jTable.getValueAt(jTable.getSelectedRow(),2).toString());
         txtPreco.setText(jTable.getValueAt(jTable.getSelectedRow(),3).toString());
         txtQtd.setText(jTable.getValueAt(jTable.getSelectedRow(),4).toString());
-        For.setSelectedItem(jTable.getValueAt(jTable.getSelectedRow(),5) + getName());
+        
+        String fornecedor = (String) jTable.getValueAt(jTable.getSelectedRow(),5) + " " + For.getName();
+        For.setSelectedItem(jTable.getValueAt(jTable.getSelectedRow(),5));
         
         //cbAC.setSelectedItem(jtable.getValueAt(jtable.getSelectedRow(),11).toString());
     }//GEN-LAST:event_jTableMouseClicked

@@ -1,6 +1,7 @@
 package br.com.projeto.dao;
 
 import br.com.projeto.jdbc.ConnectionFactory;
+import br.com.projeto.model.Fornecedores;
 import br.com.projeto.model.Produtos;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -85,6 +86,7 @@ public class ProdutosDao {
     }
 
     public List<Produtos> listarProdutos() {
+        
         try {
 
             //1 passo criar a lista
@@ -94,9 +96,11 @@ public class ProdutosDao {
             String sql = "select * from tb_produtos";
             PreparedStatement stmt = connection.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
+            
 
             while (rs.next()) {
                 Produtos pro = new Produtos();
+                Fornecedores cli = new Fornecedores();
 
                 pro.setCódigo(rs.getInt("id"));
                 pro.setNome(rs.getString("nome"));
@@ -104,8 +108,11 @@ public class ProdutosDao {
                 pro.setPreco(rs.getDouble("preco"));
                 pro.setQtd_estoque(rs.getString("qtd_estoque"));
                 pro.setFornecedorId(rs.getInt("for_id"));
-
+                
+                
                 lista.add(pro);
+                
+                
 
             }
 

@@ -78,6 +78,7 @@ public class FornecedoresDao {
                 cli.setBairro(rs.getString("bairro"));
                 cli.setCidade(rs.getString("cidade"));
                 cli.setUf(rs.getString("estado"));
+                cli.toString();
 
                 lista.add(cli);
             }
@@ -116,6 +117,7 @@ public class FornecedoresDao {
                 cli.setBairro(rs.getString("bairro"));
                 cli.setCidade(rs.getString("cidade"));
                 cli.setUf(rs.getString("estado"));
+                cli.toString();
 
                lista.add(cli);
             }
@@ -181,7 +183,35 @@ public class FornecedoresDao {
             JOptionPane.showMessageDialog(null, "Erro: "+ ex);           
         }
     }
-
-
+    
+    public List<Fornecedores> Nome (Fornecedores cli){
+          try {
+                List<Fornecedores> lista = new ArrayList<>();           
+            String sql = "SELECT nome FROM tb_fornecedores WHERE id =?;";
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setInt(1,cli.getId());
+            ResultSet rs = stmt.executeQuery();
+            
+            while(rs.next()){
+                              
+                cli.setNome(rs.getString("nome"));
+                lista.add(cli);
+            
+            
+            
+            stmt.execute();
+            stmt.close();
+            
+            //JOptionPane.showMessageDialog(null, "Excluido com sucesso!!!");
+                                 
+        lista.add(cli);
+            }
+            return lista;         
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro: "+ ex);
+            return null;
+        }
+    }
 
 }
