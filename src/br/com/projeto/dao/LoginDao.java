@@ -3,7 +3,6 @@ package br.com.projeto.dao;
 
 import br.com.projeto.jdbc.ConnectionFactory;
 import br.com.projeto.model.Login;
-import br.com.projeto.view.JFrmFornecedores;
 import br.com.projeto.view.JFrmProdutos;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -24,7 +24,7 @@ public class JFrmProdutos extends javax.swing.JFrame {
      */
     public JFrmProdutos() {
         initComponents();
-        
+
     }
 
     /**
@@ -58,6 +58,7 @@ public class JFrmProdutos extends javax.swing.JFrame {
         txtdesc = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable = new javax.swing.JTable();
+        btSairProduto = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPDadosPessois = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -90,6 +91,7 @@ public class JFrmProdutos extends javax.swing.JFrame {
         btExcluirFornecedor = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtable = new javax.swing.JTable();
+        btSairFornecedor1 = new javax.swing.JButton();
         btNovo = new javax.swing.JButton();
         btEditar = new javax.swing.JButton();
 
@@ -248,6 +250,16 @@ public class JFrmProdutos extends javax.swing.JFrame {
             jTable.getColumnModel().getColumn(5).setResizable(false);
         }
 
+        btSairProduto.setBackground(new java.awt.Color(204, 204, 204));
+        btSairProduto.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        btSairProduto.setText("Sair");
+        btSairProduto.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btSairProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSairProdutoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPDadosProdutosLayout = new javax.swing.GroupLayout(jPDadosProdutos);
         jPDadosProdutos.setLayout(jPDadosProdutosLayout);
         jPDadosProdutosLayout.setHorizontalGroup(
@@ -263,7 +275,7 @@ public class JFrmProdutos extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtNomePro, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(335, Short.MAX_VALUE))
+                        .addContainerGap(372, Short.MAX_VALUE))
                     .addGroup(jPDadosProdutosLayout.createSequentialGroup()
                         .addGroup(jPDadosProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPDadosProdutosLayout.createSequentialGroup()
@@ -278,8 +290,10 @@ public class JFrmProdutos extends javax.swing.JFrame {
                                 .addGap(28, 28, 28)
                                 .addComponent(EditarProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(ExcluirProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(ExcluirProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btSairProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 136, Short.MAX_VALUE))
                     .addGroup(jPDadosProdutosLayout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -319,14 +333,15 @@ public class JFrmProdutos extends javax.swing.JFrame {
                     .addComponent(txtQtd)
                     .addComponent(jLabel13)
                     .addComponent(For, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65)
                 .addGroup(jPDadosProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LimparProduto)
                     .addComponent(SalvarProduto)
                     .addComponent(EditarProduto)
-                    .addComponent(ExcluirProduto))
+                    .addComponent(ExcluirProduto)
+                    .addComponent(btSairProduto))
                 .addGap(29, 29, 29))
         );
 
@@ -593,6 +608,16 @@ public class JFrmProdutos extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jtable);
 
+        btSairFornecedor1.setBackground(new java.awt.Color(204, 204, 204));
+        btSairFornecedor1.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        btSairFornecedor1.setText("Sair");
+        btSairFornecedor1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btSairFornecedor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSairFornecedor1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -607,14 +632,16 @@ public class JFrmProdutos extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btEditarFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btExcluirFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btExcluirFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btSairFornecedor1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPDadosPessois, javax.swing.GroupLayout.PREFERRED_SIZE, 813, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 813, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -622,12 +649,13 @@ public class JFrmProdutos extends javax.swing.JFrame {
                 .addComponent(jPDadosPessois, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btLimparFornecedor)
                     .addComponent(btSalvarFornecedor)
                     .addComponent(btEditarFornecedor)
-                    .addComponent(btExcluirFornecedor))
+                    .addComponent(btExcluirFornecedor)
+                    .addComponent(btSairFornecedor1))
                 .addGap(15, 15, 15))
         );
 
@@ -666,12 +694,12 @@ public class JFrmProdutos extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(401, 401, 401)
                     .addComponent(btNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(356, Short.MAX_VALUE)))
+                    .addContainerGap(393, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(405, 405, 405)
                     .addComponent(btEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(359, Short.MAX_VALUE)))
+                    .addContainerGap(396, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -684,12 +712,12 @@ public class JFrmProdutos extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(313, 313, 313)
                     .addComponent(btNovo)
-                    .addContainerGap(393, Short.MAX_VALUE)))
+                    .addContainerGap(400, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(313, 313, 313)
                     .addComponent(btEditar)
-                    .addContainerGap(393, Short.MAX_VALUE)))
+                    .addContainerGap(400, Short.MAX_VALUE)))
         );
 
         pack();
@@ -698,18 +726,18 @@ public class JFrmProdutos extends javax.swing.JFrame {
     private void txtQtdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQtdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtQtdActionPerformed
- 
+
     private void ForActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForActionPerformed
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_ForActionPerformed
 
     private void txtNomeProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeProActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeProActionPerformed
-     
+
     public void listarFornecedores() {
-        
+
         DefaultTableModel modelo = (DefaultTableModel) jtable.getModel();
         modelo.setNumRows(0);
         FornecedoresDao dao = new FornecedoresDao();
@@ -729,70 +757,70 @@ public class JFrmProdutos extends javax.swing.JFrame {
                 p.getBairro(),
                 p.getCidade(),
                 p.getUf()
-                
+
             });
 
         }
 
     }
+
     public void listarProduto() {
-        
+
         DefaultTableModel modelo = (DefaultTableModel) jTable.getModel();
         modelo.setNumRows(0);
-         ProdutosDao dao = new ProdutosDao();
-         Produtos d = new Produtos();
-         FornecedoresDao da = new FornecedoresDao();
-         String nome = null;
-        
-        for(Fornecedores t: da.listarFornecedores()){
-            nome= t.toString();
-            String h = nome.substring(0,1);
-        int n;
-        n = Integer.parseInt(h);
-        
-            System.out.println(nome.substring(1));
-            for(Produtos p: dao.listarProdutos()){
-            if (n == p.getFornecedorId()) {
-            
-            modelo.addRow(new Object[]{
-                p.getCódigo(),
-                p.getNome(),
-                p.getDescricao(),
-                p.getPreco(),
-                p.getQtd_estoque(),
-                p.getFornecedorId() + nome.substring(1)
-               
-                
-            
-            });
+        ProdutosDao dao = new ProdutosDao();
+        Produtos d = new Produtos();
+        FornecedoresDao da = new FornecedoresDao();
+        String nome = null;
+
+        for (Fornecedores t : da.listarFornecedores()) {
+            nome = t.toString();
+            String h = nome.substring(0, 1);
+            int n;
+            n = Integer.parseInt(h);
+
+            //System.out.println(nome.substring(1));
+            for (Produtos p : dao.listarProdutos()) {
+                if (n == p.getFornecedorId()) {
+
+                    modelo.addRow(new Object[]{
+                        p.getCódigo(),
+                        p.getNome(),
+                        p.getDescricao(),
+                        p.getPreco(),
+                        p.getQtd_estoque(),
+                        p.getFornecedorId() + nome.substring(1)
+
+                    });
+                }
+            }
         }
-     }}}
-     
-     public void ProCombobox(){
-         FornecedoresDao dao = new FornecedoresDao();
-        
-        for(Fornecedores p: dao.listarFornecedores()){
+    }
+
+    public void ProCombobox() {
+        FornecedoresDao dao = new FornecedoresDao();
+
+        for (Fornecedores p : dao.listarFornecedores()) {
             For.removeItem(p.toString());
             For.addItem(p.toString());
             //For.removeItem(p.toString());
-           //For.removeAllItems();
+            //For.removeAllItems();
         }
-     
-     }
+
+    }
     private void SalvarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarProdutoActionPerformed
         // TODO add your handling code here:
-         // TODO add your handling code here:
+        // TODO add your handling code here:
         Produtos pro = new Produtos();
-        
-       pro.setNome(txtNomePro.getText());
+
+        pro.setNome(txtNomePro.getText());
         pro.setDescricao(txtdesc.getText());
         pro.setPreco(Double.parseDouble(txtPreco.getText()));
         pro.setQtd_estoque(txtQtd.getText());
         String t = For.getSelectedItem().toString();
-        System.out.println(t.substring(0,1));
-        pro.setFornecedorId(Integer.parseInt(t.substring(0,1)));
-        
-        
+        System.out.println(t.substring(0, 1));
+        pro.setFornecedorId(Integer.parseInt(t.substring(0, 1)));
+
         ProdutosDao dao = new ProdutosDao();
         dao.cadastrarProduto(pro);
         new Utilitarios().limpaTela(jPDadosProdutos);
@@ -803,8 +831,7 @@ public class JFrmProdutos extends javax.swing.JFrame {
         listarProduto();
         ProCombobox();
         listarFornecedores();
-        
-        
+
 
     }//GEN-LAST:event_formWindowActivated
 
@@ -816,34 +843,34 @@ public class JFrmProdutos extends javax.swing.JFrame {
     private void EditarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarProdutoActionPerformed
         // TODO add your handling code here:
         Produtos pro = new Produtos();
-        
-       pro.setNome(txtNomePro.getText());
+
+        pro.setNome(txtNomePro.getText());
         pro.setDescricao(txtdesc.getText());
         pro.setPreco(Double.parseDouble(txtPreco.getText()));
         pro.setQtd_estoque(txtQtd.getText());
         String t = For.getSelectedItem().toString();
-        System.out.println(t.substring(0,1));
-        pro.setFornecedorId(Integer.parseInt(t.substring(0,1)));
+        System.out.println(t.substring(0, 1));
+        pro.setFornecedorId(Integer.parseInt(t.substring(0, 1)));
         pro.setCódigo(Integer.parseInt(txtId.getText()));
-        
+
         ProdutosDao dao = new ProdutosDao();
         dao.alterarProduto(pro);
         new Utilitarios().limpaTela(jPDadosProdutos);
-        
+
     }//GEN-LAST:event_EditarProdutoActionPerformed
 
     private void jTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableMouseClicked
         // TODO add your handling code here:
         jTabbedPane8.setSelectedIndex(0);
-        txtId.setText(jTable.getValueAt(jTable.getSelectedRow(),0).toString());
-        txtNomePro.setText(jTable.getValueAt(jTable.getSelectedRow(),1).toString());
-        txtdesc.setText(jTable.getValueAt(jTable.getSelectedRow(),2).toString());
-        txtPreco.setText(jTable.getValueAt(jTable.getSelectedRow(),3).toString());
-        txtQtd.setText(jTable.getValueAt(jTable.getSelectedRow(),4).toString());
-        
-        String fornecedor = (String) jTable.getValueAt(jTable.getSelectedRow(),5) + " " + For.getName();
-        For.setSelectedItem(jTable.getValueAt(jTable.getSelectedRow(),5));
-        
+        txtId.setText(jTable.getValueAt(jTable.getSelectedRow(), 0).toString());
+        txtNomePro.setText(jTable.getValueAt(jTable.getSelectedRow(), 1).toString());
+        txtdesc.setText(jTable.getValueAt(jTable.getSelectedRow(), 2).toString());
+        txtPreco.setText(jTable.getValueAt(jTable.getSelectedRow(), 3).toString());
+        txtQtd.setText(jTable.getValueAt(jTable.getSelectedRow(), 4).toString());
+
+        String fornecedor = (String) jTable.getValueAt(jTable.getSelectedRow(), 5) + " " + For.getName();
+        For.setSelectedItem(jTable.getValueAt(jTable.getSelectedRow(), 5));
+
         //cbAC.setSelectedItem(jtable.getValueAt(jtable.getSelectedRow(),11).toString());
     }//GEN-LAST:event_jTableMouseClicked
 
@@ -854,9 +881,8 @@ public class JFrmProdutos extends javax.swing.JFrame {
         ProdutosDao dao = new ProdutosDao();
         dao.excluirCliente(pro);
         new Utilitarios().limpaTela(jPDadosProdutos);
-        
-        
-        
+
+
     }//GEN-LAST:event_ExcluirProdutoActionPerformed
 
     private void btNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoActionPerformed
@@ -887,7 +913,7 @@ public class JFrmProdutos extends javax.swing.JFrame {
 
         FornecedoresDao dao = new FornecedoresDao();
         dao.cadastrarFornecedores(cli);
-       new Utilitarios().limpaTela(jPDadosPessois);
+        new Utilitarios().limpaTela(jPDadosPessois);
 
         //listar()
 
@@ -941,7 +967,6 @@ public class JFrmProdutos extends javax.swing.JFrame {
         dao.alterarFornecedores(cli);
         new Utilitarios().limpaTela(jPDadosPessois);
 
-        
 
     }//GEN-LAST:event_btEditarFornecedorActionPerformed
 
@@ -960,18 +985,18 @@ public class JFrmProdutos extends javax.swing.JFrame {
     private void jtableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtableMouseClicked
         // TODO add your handling code here:
         //jTabbedPane8.setSelectedIndex(0);
-        txtId1.setText(jtable.getValueAt(jtable.getSelectedRow(),0).toString());
-        txtNomeFor.setText(jtable.getValueAt(jtable.getSelectedRow(),1).toString());
-        ftxtRg.setText(jtable.getValueAt(jtable.getSelectedRow(),2).toString());
-        ftxtCpf.setText(jtable.getValueAt(jtable.getSelectedRow(),3).toString());
-        txtEmail.setText(jtable.getValueAt(jtable.getSelectedRow(),4).toString());
-        ftxtCelular.setText(jtable.getValueAt(jtable.getSelectedRow(),5).toString());
-        FtxtCep.setText(jtable.getValueAt(jtable.getSelectedRow(),6).toString());
-        txtEndereco.setText(jtable.getValueAt(jtable.getSelectedRow(),7).toString());
-        fintNum.setText(jtable.getValueAt(jtable.getSelectedRow(),8).toString());
-        txtBairro.setText(jtable.getValueAt(jtable.getSelectedRow(),9).toString());
-        txtCidade.setText(jtable.getValueAt(jtable.getSelectedRow(),10).toString());
-        cbAC.setSelectedItem(jtable.getValueAt(jtable.getSelectedRow(),11).toString());
+        txtId1.setText(jtable.getValueAt(jtable.getSelectedRow(), 0).toString());
+        txtNomeFor.setText(jtable.getValueAt(jtable.getSelectedRow(), 1).toString());
+        ftxtRg.setText(jtable.getValueAt(jtable.getSelectedRow(), 2).toString());
+        ftxtCpf.setText(jtable.getValueAt(jtable.getSelectedRow(), 3).toString());
+        txtEmail.setText(jtable.getValueAt(jtable.getSelectedRow(), 4).toString());
+        ftxtCelular.setText(jtable.getValueAt(jtable.getSelectedRow(), 5).toString());
+        FtxtCep.setText(jtable.getValueAt(jtable.getSelectedRow(), 6).toString());
+        txtEndereco.setText(jtable.getValueAt(jtable.getSelectedRow(), 7).toString());
+        fintNum.setText(jtable.getValueAt(jtable.getSelectedRow(), 8).toString());
+        txtBairro.setText(jtable.getValueAt(jtable.getSelectedRow(), 9).toString());
+        txtCidade.setText(jtable.getValueAt(jtable.getSelectedRow(), 10).toString());
+        cbAC.setSelectedItem(jtable.getValueAt(jtable.getSelectedRow(), 11).toString());
 
     }//GEN-LAST:event_jtableMouseClicked
 
@@ -982,6 +1007,16 @@ public class JFrmProdutos extends javax.swing.JFrame {
     private void fintNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fintNumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fintNumActionPerformed
+
+    private void btSairFornecedor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSairFornecedor1ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btSairFornecedor1ActionPerformed
+
+    private void btSairProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSairProdutoActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btSairProdutoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1061,6 +1096,8 @@ public class JFrmProdutos extends javax.swing.JFrame {
     private javax.swing.JButton btExcluirFornecedor;
     private javax.swing.JButton btLimparFornecedor;
     private javax.swing.JButton btNovo;
+    private javax.swing.JButton btSairFornecedor1;
+    private javax.swing.JButton btSairProduto;
     private javax.swing.JButton btSalvarFornecedor;
     private javax.swing.JComboBox<String> cbAC;
     private javax.swing.JTextField fintNum;
