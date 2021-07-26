@@ -1010,12 +1010,17 @@ public class JFrmProdutos extends javax.swing.JFrame {
 
     private void btSairFornecedor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSairFornecedor1ActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+        new JFrmLogin().setVisible(true);
+        this.dispose();
+        //System.exit(0);
     }//GEN-LAST:event_btSairFornecedor1ActionPerformed
 
     private void btSairProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSairProdutoActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+        new JFrmLogin().setVisible(true);
+        this.dispose();
+
+        //System.exit(0);
     }//GEN-LAST:event_btSairProdutoActionPerformed
 
     /**
