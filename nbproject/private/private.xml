@@ -3,13 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/eduarda/NetBeansProjects/projeto%20curso/src/br/com/projeto/view/JFrmProdutos.java</file>
-            <file>file:/home/eduarda/NetBeansProjects/projeto%20curso/src/br/com/projeto/model/Fornecedores.java</file>
-            <file>file:/home/eduarda/NetBeansProjects/projeto%20curso/src/br/com/projeto/dao/FornecedoresDao.java</file>
-            <file>file:/home/eduarda/NetBeansProjects/projeto%20curso/src/br/com/projeto/view/JFrmLogin.java</file>
-            <file>file:/home/eduarda/NetBeansProjects/projeto%20curso/src/br/com/projeto/model/Produtos.java</file>
-            <file>file:/home/eduarda/NetBeansProjects/projeto%20curso/src/br/com/projeto/dao/ProdutosDao.java</file>
-            <file>file:/home/eduarda/NetBeansProjects/projeto%20curso/src/br/com/projeto/view/JFrmFornecedores.java</file>
+            <file>file:/home/eduarda/NetBeansProjects/MercadinhoDuda/src/br/com/projeto/view/JFrmProdutos.java</file>
+            <file>file:/home/eduarda/NetBeansProjects/MercadinhoDuda/src/br/com/projeto/view/JFrmLogin.java</file>
+            <file>file:/home/eduarda/NetBeansProjects/MercadinhoDuda/src/br/com/projeto/model/Produtos.java</file>
+            <file>file:/home/eduarda/NetBeansProjects/MercadinhoDuda/src/br/com/projeto/model/Fornecedores.java</file>
+            <file>file:/home/eduarda/NetBeansProjects/MercadinhoDuda/src/br/com/projeto/dao/FornecedoresDao.java</file>
+            <file>file:/home/eduarda/NetBeansProjects/MercadinhoDuda/src/br/com/projeto/view/CadastrarLogin.java</file>
+            <file>file:/home/eduarda/NetBeansProjects/MercadinhoDuda/src/br/com/projeto/dao/LoginDao.java</file>
+            <file>file:/home/eduarda/NetBeansProjects/MercadinhoDuda/src/br/com/projeto/dao/ProdutosDao.java</file>
         </group>
     </open-files>
 </project-private>

@@ -4,6 +4,7 @@
 
 *.xml
 *.mf
-/build
-/nbproject
-/test
+build/
+nbproject/
+test/
+dist/
